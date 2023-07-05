@@ -7,6 +7,10 @@ echo "executing $0 {"
 rm -rf donald_webserver/
 git clone "https://$MACHINE_USER_TOKEN@github.com/hns-training/donald_webserver.git"
 cd donald_webserver/
+git config user.email "user@machine.com"
+git config user.name "Machine User"
+
+
 cp ../index.html .
 git add --all
 git commit -m "$(date)" || true
