@@ -5,7 +5,7 @@ set -e
 echo "executing $0 {"
 
 rm -rf donald_webserver/
-git clone https://github.com/hns-training/donald_webserver.git
+git clone "https://$MACHINE_USER_TOKEN@github.com/hns-training/donald_webserver.git"
 cd donald_webserver/
 cp ../index.html .
 git add --all
